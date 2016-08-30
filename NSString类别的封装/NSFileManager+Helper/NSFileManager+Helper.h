@@ -11,7 +11,7 @@
 typedef enum : NSUInteger {
     FileTypePNG,
     FileTypeJPEG,
-    FileTypeGIF,
+    FileTypeGIF,    //!<暂不支持gif存储
     FileTypeWAV,
     FileTypeMP3,
     FileTypeMOV,

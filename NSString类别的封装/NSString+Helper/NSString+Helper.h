@@ -12,12 +12,12 @@
 #define fileManger [NSFileManager defaultManager]
 
 typedef enum : NSUInteger {
-    TimeStringFormatterStyleNormal,    //!< yyyy-MM-dd HH:mm:ss(双用)
-    TimeStringFormatterStyleCurrentDateNoSymbol,   //!< yyyyMMddHHssSSS(获取当前时间字符串)
-    TimeStringFormatterStyleCurrentDateStyle1,          //!< yyyy-MM-dd HH:mm(同上)
-    TimeStringFormatterStyleCurrentDateStyle2,          //!< yyyy-MM-dd HH:mm:ss:SSS(同上)
-    TimeStringFormatterStyleTimeLine,   //!<朋友圈时间显示
-    TimeStringFormatterStyleConversation,//!<会话时间显示（类似微信）
+    TimeStringFormatterStyleNormal,                 //!< yyyy-MM-dd HH:mm:ss(双用)
+    TimeStringFormatterStyleCurrentDateNoSymbol,    //!< yyyyMMddHHssSSS(获取当前时间字符串)
+    TimeStringFormatterStyleCurrentDateStyle1,      //!< yyyy-MM-dd HH:mm(同上)
+    TimeStringFormatterStyleCurrentDateStyle2,      //!< yyyy-MM-dd HH:mm:ss:SSS(同上)
+    TimeStringFormatterStyleTimeLine,               //!<朋友圈时间显示
+    TimeStringFormatterStyleConversation,           //!<会话时间显示（类似微信）
 } TimeStringFormatterStyle;
 
 
@@ -64,7 +64,7 @@ typedef enum : NSUInteger {
  *
  *  @return 保密后的电话号码
  */
-- (NSString *)getSecretPhoneNumber;
+- (NSString *)formatSecretPhoneNumber;
 
 #pragma mark - 错误码
 /**
@@ -123,6 +123,8 @@ typedef enum : NSUInteger {
  */
 + (NSString *)timeFormateWithTimeFormatterStyle:(TimeStringFormatterStyle)timeStringFormatterStyle timeInterval:(long long)ts;
 
+
+- (NSString *)replaceHtmlString;
 
 
 @end

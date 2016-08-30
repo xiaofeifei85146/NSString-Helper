@@ -11,13 +11,41 @@
 
 @implementation NSString (Helper)
 
-#pragma mark - 手机号码133****3333这种格式处理
-- (NSString *)getSecretPhoneNumber {
+#pragma mark - 手机号码处理
+- (NSString *)formatSecretPhoneNumber {
     NSString *orgString = self;
     
     NSMutableString *newString = [NSMutableString stringWithString:orgString];
     [newString replaceCharactersInRange:NSMakeRange(3, 4) withString:@"****"];
     
+    return newString;
+}
+
+- (CGSize)sizeWithFont:(UIFont *)font maxW:(CGFloat)maxW
+{
+    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
+    attrs[NSFontAttributeName] = font;
+    CGSize maxSize = CGSizeMake(maxW, MAXFLOAT);
+    return [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil].size;
+}
+
+- (CGSize)sizeWithFont:(UIFont *)font
+{
+    return [self sizeWithFont:font maxW:MAXFLOAT];
+}
+
+/**
+ *  将电话号码格式转化
+ *
+ *  @return 133-3333-3333
+ */
+- (NSString *)formatTelephone {
+    NSMutableString *orgString = [NSMutableString stringWithString:self];
+    
+    [orgString insertString:@"-" atIndex:3];
+    [orgString insertString:@"-" atIndex:8];
+    
+    NSString *newString = orgString;
     return newString;
 }
 
@@ -313,6 +341,28 @@
     return string;
 }
 
+
+- (NSString *)replaceHtmlString {
+    
+    NSString *oldStr = self;
+    oldStr = [oldStr stringByReplacingOccurrencesOfString:@"&mdash;" withString:@"－"];
+    oldStr = [oldStr stringByReplacingOccurrencesOfString:@"&ldquo;" withString:@"“"];
+    oldStr = [oldStr stringByReplacingOccurrencesOfString:@"&rdquo;" withString:@"”"];
+    oldStr = [oldStr stringByReplacingOccurrencesOfString:@"&rarr;" withString:@"→"];
+    oldStr = [oldStr stringByReplacingOccurrencesOfString:@"&nbsp;" withString:@" "];
+    oldStr = [oldStr stringByReplacingOccurrencesOfString:@"&hellip;" withString:@"..."];
+    oldStr = [oldStr stringByReplacingOccurrencesOfString:@"&quot;" withString:@""""];
+    oldStr = [oldStr stringByReplacingOccurrencesOfString:@"&lt;" withString:@"<"];
+    oldStr = [oldStr stringByReplacingOccurrencesOfString:@"&gt;" withString:@">"];
+    oldStr = [oldStr stringByReplacingOccurrencesOfString:@"&times;" withString:@"×"];
+    oldStr = [oldStr stringByReplacingOccurrencesOfString:@"&divide;" withString:@"÷"];
+    oldStr = [oldStr stringByReplacingOccurrencesOfString:@"&yen;" withString:@"¥"];
+    oldStr = [oldStr stringByReplacingOccurrencesOfString:@"&sim;" withString:@"∼"];
+    oldStr = [oldStr stringByReplacingOccurrencesOfString:@"&middot;" withString:@"·"];
+    
+    return oldStr;
+}
+
 - (BOOL)isEmpty {
     NSString *string = self;
     if (string&&string.length>0) {
@@ -320,6 +370,8 @@
     }
     return NO;
 }
+
+
 
 @end
 

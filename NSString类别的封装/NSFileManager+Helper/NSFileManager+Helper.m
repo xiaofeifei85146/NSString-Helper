@@ -36,10 +36,11 @@
             }
                 break;
                 
-            case FileTypeGIF://保存gif图片的时候，要直接传递过来gifData
+            case FileTypeGIF://暂不支持gif本地存储
             {
                 //将animationImage转化为data之后存储
-#warning 需要后来补充
+                NSAssert(1, @"暂不支持gif图片存储");
+
                 [fileName stringByAppendingString:@".GIF"];
             }
                 break;

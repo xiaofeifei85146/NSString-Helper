@@ -17,7 +17,7 @@
 		EC0D4EBA1D6EA0E7000AF974 /* NSString_____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0D4EB91D6EA0E7000AF974 /* NSString_____UITests.m */; };
 		EC0D4ECC1D6EA157000AF974 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0D4ECB1D6EA157000AF974 /* NSString+Helper.m */; };
 		EC0D4ED21D6EA42C000AF974 /* NSFileManager+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0D4ED11D6EA42C000AF974 /* NSFileManager+Helper.m */; };
-		EC0D4F141D6EF631000AF974 /* UIImage+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0D4F131D6EF631000AF974 /* UIImage+Helper.m */; };
+		EC40CAAE1D753B320099E55F /* BARegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = EC40CAAD1D753B320099E55F /* BARegularExpression.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +58,8 @@
 		EC0D4ECB1D6EA157000AF974 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Helper.m"; path = "NSString+Helper/NSString+Helper.m"; sourceTree = "<group>"; };
 		EC0D4ED01D6EA42C000AF974 /* NSFileManager+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+Helper.h"; path = "NSFileManager+Helper/NSFileManager+Helper.h"; sourceTree = "<group>"; };
 		EC0D4ED11D6EA42C000AF974 /* NSFileManager+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+Helper.m"; path = "NSFileManager+Helper/NSFileManager+Helper.m"; sourceTree = "<group>"; };
-		EC0D4F121D6EF631000AF974 /* UIImage+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Helper.h"; path = "UIImage+Helper/UIImage+Helper.h"; sourceTree = "<group>"; };
-		EC0D4F131D6EF631000AF974 /* UIImage+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Helper.m"; path = "UIImage+Helper/UIImage+Helper.m"; sourceTree = "<group>"; };
+		EC40CAAC1D753B320099E55F /* BARegularExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BARegularExpression.h; sourceTree = "<group>"; };
+		EC40CAAD1D753B320099E55F /* BARegularExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BARegularExpression.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +118,8 @@
 				EC0D4ECB1D6EA157000AF974 /* NSString+Helper.m */,
 				EC0D4ED01D6EA42C000AF974 /* NSFileManager+Helper.h */,
 				EC0D4ED11D6EA42C000AF974 /* NSFileManager+Helper.m */,
-				EC0D4F121D6EF631000AF974 /* UIImage+Helper.h */,
-				EC0D4F131D6EF631000AF974 /* UIImage+Helper.m */,
+				EC40CAAC1D753B320099E55F /* BARegularExpression.h */,
+				EC40CAAD1D753B320099E55F /* BARegularExpression.m */,
 				EC0D4E9D1D6EA0E7000AF974 /* Main.storyboard */,
 				EC0D4EA01D6EA0E7000AF974 /* Assets.xcassets */,
 				EC0D4EA21D6EA0E7000AF974 /* LaunchScreen.storyboard */,
@@ -288,9 +288,9 @@
 				EC0D4E9C1D6EA0E7000AF974 /* ViewController.m in Sources */,
 				EC0D4ED21D6EA42C000AF974 /* NSFileManager+Helper.m in Sources */,
 				EC0D4E991D6EA0E7000AF974 /* AppDelegate.m in Sources */,
-				EC0D4F141D6EF631000AF974 /* UIImage+Helper.m in Sources */,
 				EC0D4E961D6EA0E7000AF974 /* main.m in Sources */,
 				EC0D4ECC1D6EA157000AF974 /* NSString+Helper.m in Sources */,
+				EC40CAAE1D753B320099E55F /* BARegularExpression.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
